@@ -11,10 +11,11 @@
 //1. make a request to the server to my project with fetch.
 function fetchItems(){
     fetch('http://localhost:3000/items')
-        console.log ('1.fetchItems runs')
     .then((response) => response.json())
     .then((items) => items.forEach(item => cardItem(item)));
+    console.log ('1.fetchItems runs')
 }
+
 //2. create the card were each item will show
 
 function cardItem(item){
@@ -24,16 +25,24 @@ function cardItem(item){
     let card = document.createElement ('div') 
     card.className = 'card'
     card.innerHTML = `
-    <h2> "${item.name} @ ${item.store} @ ${item.mall}" </h2>
-    <img class ="item_picture" scr = '${item.image}'>
-    <p id= "item_likes_number"> ${item.likes}</p>
+
+    <h4> "${item.name} @ ${item.store} @ ${item.mall}" </h4>
+
+    <img class ="item_picture" src = '${item.image}'>
     <p style="text-align:center">
-    <button class="like-btn" id=${item.id}> Like </button>
-  </p>
+    <button class="map-btn" id=${item.id}> Take me to ${item.store}! </button>
+    </p>
+    <p id=""> Details:</p>
+        <ul id="details_list">
+            <li>Gender:${item.gender} </li>
+            <li>Size: ${item.size}</li>
+            <li>Color: ${item.color}</li>
+        </ul>
+
     `
 //3. add/append card to the dom inside the card
     document.querySelector('#sorted-collection').appendChild(card)
-    likeBtnClick(item)
+   // likeBtnClick(item)
 }
 
 //4. initialize
@@ -42,17 +51,14 @@ function initialize(){
 }
 initialize()
 
-//2. SORT THE ITEMS BY STATE:
-//1. grab the state menu
-//2. grab the state menu name
-//3. grab from the data, the state name
-//4. if the state is equal to the state menu name, the item goes to the DOM
 
-//3. THAT RESULT, filter IT BY MALL:
-//1. grab the previous return
-//2. grab the category Mall 
-//3. grab user mall choice
-//4. return items that match that mall. 
+//3. filter the items by "I am looking for":
+//1. grab the "Im looking for" menu 
+//2. filter items by user choice.
+
+
+
+
 
 //4. THAT RESULT, filter IT BY CATEGORY:
 //1. grab the previous return
