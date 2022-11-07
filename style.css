@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: monospace;
+    background: #fbfcfc;
+  }
+  
+  #my-mall-header {
+    display: flex;
+    justify-content: left;
+    background: #0b0c11;
+    opacity: .8;
+    height: 7rem;
+    padding: 1rem;
+    margin: 2rem;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  a:link {
+    color: rgb(31, 207, 223);
+    border-bottom: 1px solid #ff0000;
+  }
+  a:visited {
+    color: #e600e6;
+    border-bottom: 1px solid #b3b3b3;
+  }
+  a:hover {
+    color: #f8faf9;
+    border-bottom: 1px solid #000099;
+  }
+
+
+  #my-mall-header-logo {
+    height: 6rem;
+    width: auto;
+    
+  }
+  
+  #select-your-mall {
+    font-family: Georgia;
+    color: #042929;
+    font-size: larger;
+    height: 6rem;
+    width: auto;
+    margin: 2rem;
+  }
+
+  #categories-menu {
+    display: flex;
+    font-family: Verdana; 
+    font-size: larger;
+    height: 6rem;
+    margin: 2rem;
+    padding: 3rem;
+    background:#4d505e;
+  }
+
+  #sorted-collection {
+    margin: 2rem;
+    padding: 1rem;
+    background: #4d505e;
+  }
+  #sorted-collection-title {
+    display: flex;
+    font-family: Verdana; 
+    font-size: 25px;
+    height: 3rem;
+    margin: -1rem;
+    padding: 2rem;
+    background:#4d505e;
+  }
+  .card {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #bde8f0
+  }
+  
+  .mall-img {
+    justify-self: center;
+    height: 12rem;
+    width: auto;
+  }
+  
+  button {
+    position: relative;
+    background-color: #e04b52;
+    border: none;
+    border-radius: 5px;
+    height: 3rem;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 18px;
+    justify-self: center;
+  }
+  
+  button:hover {
+    background-color: whitesmoke;
+    border: #e04b52 solid 1px;
+    color: #e04b52;
+  }
+  
+  .choose-section {
+    padding: 1rem;
+    width: stretch;
+    height: auto;
+    display: none;
+    background: #515DA2;
+    opacity: .8;
+  }
+  
+  .add-mall-form {
+    width: 80%
+  }
+  
+  .submit {
+    position: relative;
+    background-color: #e04b52;
+    border-radius: 5px;
+    height: 2rem;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 18px;
+    justify-self: center;
+    font-family: monospace;
+    margin: 3px;
+  }
+  
+  .submit:hover {
+    background-color: whitesmoke;
+    border: #e04b52 solid 1px;
+    color: #e04b52;
+  }
+  
+  
+  .input-text {
+    border-radius: 5px;
+    height: 2rem;
+    width: 60%;
+    font-size: 18px;
+    font-family: monospace;
+    margin: 3px;
+  }
+  

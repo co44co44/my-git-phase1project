@@ -1,4 +1,81 @@
 
+# Name: 
+MyMallHelper
+
+# Description: 
+MyMallHelper is an app that helps shoppers who are visiting a Mall, to find the store(s) at that same mall, where the item they are looking for is being sold. The app will return to the user: the items available at their current mall that matched their search, the name(s) of the store(s), and their location at the current Mall.  
+
+# Story of this app: 
+ Shoppers at a mall can waste a lot of time looking for an item.  It is exhausting and requires a lot of effort and energy because of not knowing where to go.  This app wants to help shoppers find the item they need, by provinding them the store name and location where their item is being sold. 
+
+# Audience:
+Shoppers at an specific Mall.  
+This first first version of the app will mock the Sawgrass Mills Mall at Sunrise-Florida. 
+
+# Server:
+In the future, the data used will be the data from the online stores that are physically at those malls. However, for this project, a jb.json file is being used with the data that the user will have available. 
+
+# Support:
+If you need support contact me at : crisordonez44@gmail.com 
+
+# Author:
+Maria Cristina Ordonez C.
+
+# The data was obtained and created using:
+https://oldnavy.gap.com/
+
+
+# Future additions:
+- This app will find your location, so it will automatically select your mall.  This will be instead of Select your State & Select your Mall.
+- When you click take me to the stores' location in a live map.  This will be a future addition on further phases. 
+- This app will do scrapping for using the websites' servers on the stores at the malls to retrieve data (instead of the db.json file).
+- This app will have more searching options when it is connected to the server.  Meanwhile, the other options the user will be able to select are commented out. 
+-The state and the Mall are setup by default for this project, this will change on future phases where I will be able to add their live location. 
+
+# Project Status:
+Currenly working on it...
+
+-------------------------
+ERASE THE FOLLOWING WHEN DONE =>
+
+Description
+Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+
+Badges
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+
+Visuals
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+
+Installation
+Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+
+Usage
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+
+
+Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+
+Roadmap
+If you have ideas for releases in the future, it is a good idea to list them in the README.
+
+Contributing
+State if you are open to contributions and what your requirements are for accepting them.
+
+For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+
+You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+
+Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
+
+License
+For open source projects, say how it is licensed.
+
+Project status
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
+
 [GITHUB REPOSITORY]: A well-written informative README.md file. This is the business card of your project and you really want it to look great! A template can be found here: makeareadme.comLinks to an external site.. Some additional considerations:
 If you used someone else's pictures or material please make sure you give them credit in your README.
 If you think your blog post and/or video are really good and would add value, add them to your README.md.
