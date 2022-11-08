@@ -9,7 +9,7 @@ body {
     justify-content: left;
     background: #0b0c11;
     opacity: .8;
-    height: 7rem;
+    height: rem;
     padding: 1rem;
     margin: 2rem;
   }
@@ -45,6 +45,15 @@ body {
     margin: 2rem;
   }
 
+  #looking-for{
+    font-family: Georgia;
+    color: #042929;
+    font-size: larger;
+    height: 6rem;
+    width: auto;
+    margin: 2rem;
+  }
+
   #categories-menu {
     display: flex;
     font-family: Verdana; 
@@ -68,6 +77,7 @@ body {
     margin: -1rem;
     padding: 2rem;
     background:#4d505e;
+    color: #e8f3f3;
   }
   .card {
     text-align: center;
@@ -100,7 +110,7 @@ body {
     justify-self: left;
   }
   #details_list {
-   
+    font-size: 10px;
     text-align: left;
   }
   button {
