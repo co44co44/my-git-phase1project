@@ -53,20 +53,30 @@ function cardItem(item){
 //1. grab the "Im looking for" menu
 
 let dropdownLookingFor = document.querySelector('#looking-for-dropdown');
-let dropdownGender = document.querySelector('#breed-dropdown');
+let dropdownGender = document.querySelector('#gender-dropdown');
 
 
 //2. remove data displayed in the DOM by creating a function that tells what will happend 
 //when the dropdown is clicked
 
 function hideDropdownWhenClicked(){
-    dropdownLookingFor.addEventListener ('change', (e) =>{
-    removeAllChildNodesItems(document.querySelector('#sorted-collection'));
-    console.log ('3. items are hidding')
-    lookingForSelection()
+    document.querySelectorAll('.dropdown-class').forEach(item => {
+        item.addEventListener ('change', (e) =>{
+            removeAllChildNodesItems(document.querySelector('#sorted-collection'));
+            console.log ('3. items are hidding')
+            lookingForSelection()
+            genderSelection()
+
+//I am changing this area so I add a class to grab all dropdowns by their class
+// so I do not have to repeat my code.
+    // dropdownLookingFor.addEventListener ('change', (e) =>{
+    // removeAllChildNodesItems(document.querySelector('#sorted-collection'));
+    // console.log ('3. items are hidding')
+    // lookingForSelection()
+    // genderSelection()
 
     document.querySelector('#sorted-collection').appendChild.innerHTML;
-    })}
+    })})}
 
 function removeAllChildNodesItems(parent){
     while (parent.firstChild){
@@ -82,7 +92,7 @@ function lookingForSelection(){
      fetch('http://localhost:3000/items')
     .then((response) => response.json())
     .then((items) => items.filter(item => {
-        console.log (item.name)
+        //console.log (item.name)
         //console.log (dropdownLookingFor.value)
         if (item.name == dropdownLookingFor.value) {
             console.log('4.fetch lookingfor dropdown ')
@@ -97,24 +107,45 @@ function lookingForSelection(){
 //2.create a function genderSelection() that: fetchs from server the data, 
 //filters it by a conditional: if dropdown.value == to item.name, put the item in the cardItem function.
 // Then, upload it to the DOM with queryselector.appendChild
- function genderSelection(){
+
+
+
+
+function genderSelection(){
     fetch('http://localhost:3000/items')
    .then((response) => response.json())
    .then((items) => items.filter(item => {
-       console.log (item.name)
-       //console.log (dropdownLookingFor.value)
-       if (item.name == dropdownLookingFor.value) {
-           console.log('4.fetch lookingfor dropdown ')
+       console.log (item.gender)
+       console.log (dropdownGender.value)
+       if (item.gender == dropdownGender.value) {
+           console.log('5.fetch gender dropdown ')
            
    cardItem(item)
 
        document.querySelector('#sorted-collection').appendChild
    }
 }))}; 
+
+function genderSelection(){
+    fetch('http://localhost:3000/items')
+   .then((response) => response.json())
+   .then((items) => items.filter(item => {
+       console.log (item.gender)
+       console.log (dropdownGender.value)
+       if (item.gender == dropdownGender.value) {
+           console.log('5.fetch gender dropdown ')
+           
+   cardItem(item)
+
+       document.querySelector('#sorted-collection').appendChild
+   }
+}))}; 
+
 function initialize(){
     fetchItems()
     hideDropdownWhenClicked()
     lookingForSelection()
+    genderSelection()
 }
 initialize()
 
