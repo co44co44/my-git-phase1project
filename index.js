@@ -64,8 +64,8 @@ function hideDropdownWhenClicked(){
         item.addEventListener ('change', (e) =>{
             removeAllChildNodesItems(document.querySelector('#sorted-collection'));
             console.log ('3. items are hidding')
-            lookingForSelection()
-            genderSelection()
+            //lookingForSelection()
+           // genderSelection()
 
 //I am changing this area so I add a class to grab all dropdowns by their class
 // so I do not have to repeat my code.
@@ -88,20 +88,34 @@ function removeAllChildNodesItems(parent){
 // if dropdown.value == to item.name, put the item in the cardItem function.
 // Then, upload it to the DOM with queryselector.appendChild
 
-function lookingForSelection(){
-     fetch('http://localhost:3000/items')
-    .then((response) => response.json())
-    .then((items) => items.filter(item => {
-        //console.log (item.name)
-        //console.log (dropdownLookingFor.value)
-        if (item.name == dropdownLookingFor.value) {
-            console.log('4.fetch lookingfor dropdown ')
+// let lookingForSelection = () => {
+//     fetch('http://localhost:3000/items')
+//     .then((response) => response.json())
+//     .then((items) => items.filter(item => {
+//         //console.log (item.name)
+//         //console.log (dropdownLookingFor.value)
+//         if (item.name == dropdownLookingFor.value) {
+//             console.log('4.fetch lookingfor dropdown ')
             
-    cardItem(item)
+//     cardItem(item)
+ 
+//         document.querySelector('#sorted-collection').appendChild
+//     }}))}; 
 
-        document.querySelector('#sorted-collection').appendChild
-    }
-}))}; 
+// function lookingForSelection(){
+//      fetch('http://localhost:3000/items')
+//     .then((response) => response.json())
+//     .then((items) => items.filter(item => {
+//         //console.log (item.name)
+//         //console.log (dropdownLookingFor.value)
+//         if (item.name == dropdownLookingFor.value) {
+//             console.log('4.fetch lookingfor dropdown ')
+            
+//     cardItem(item)
+
+//         document.querySelector('#sorted-collection').appendChild
+//     }
+// }))}; 
  // CREATE THE GENDER DROPDOWN:
 //1. at the top (global scope) grab the gender dropdown with query selector 
 //2.create a function genderSelection() that: fetchs from server the data, 
@@ -111,41 +125,84 @@ function lookingForSelection(){
 
 
 
-function genderSelection(){
-    fetch('http://localhost:3000/items')
-   .then((response) => response.json())
-   .then((items) => items.filter(item => {
-       console.log (item.gender)
-       console.log (dropdownGender.value)
-       if (item.gender == dropdownGender.value) {
-           console.log('5.fetch gender dropdown ')
+// let genderSelection = () => {
+//     console.log (lookingForSelection)
+    
+//     // return lookingForSelection.filter(item => {
+//     //    console.log (item.gender)
+//     //    console.log (dropdownGender.value)
+//        if (lookingForSelection.value.item.gender == dropdownGender.value) {
+//            console.log('5.fetch gender dropdown ')
+       
+//    cardItem(item)
+
+//        document.querySelector('#sorted-collection').appendChild
+//    }}
+// // })}; 
+
+// function genderSelection(){
+//     fetch('http://localhost:3000/items')
+//    .then((response) => response.json())
+//    .then((items) => items.filter(item => {
+//        console.log (item.gender)
+//        console.log (dropdownGender.value)
+//        if (item.gender == dropdownGender.value) {
+//            console.log('5.fetch gender dropdown ')
            
-   cardItem(item)
+//    cardItem(item)
 
-       document.querySelector('#sorted-collection').appendChild
-   }
-}))}; 
+//        document.querySelector('#sorted-collection').appendChild
+//    }
+// }))}; 
 
-function genderSelection(){
+function handleSelectChange(genderDropdown,lookingForDropdown){
+    // let genderDropdown = document.getElementById(#gender-dropdown);
+    // let lookingForDropdown = document.getElementById(#looking-for-dropdown);
     fetch('http://localhost:3000/items')
-   .then((response) => response.json())
-   .then((items) => items.filter(item => {
-       console.log (item.gender)
-       console.log (dropdownGender.value)
-       if (item.gender == dropdownGender.value) {
-           console.log('5.fetch gender dropdown ')
-           
-   cardItem(item)
+    .then((response) => response.json())
+    .then((items) => items.filter(item => {
+        //console.log (item.name)
+        //console.log (dropdownLookingFor.value)
+        if (item.name == dropdownLookingFor.value) {
+            console.log('4.fetch lookingfor dropdown ')
+            
+    cardItem(item)
+ 
+        document.querySelector('#sorted-collection').appendChild
 
-       document.querySelector('#sorted-collection').appendChild
-   }
-}))}; 
+    genderDropdown.innerHTML = "";
+
+    if (lookingForDropdown.value == "pants")
+    {
+        var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
+
+    
+    } else if(lookingForDropdown.value == 'pajamas')
+    {
+        var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
+
+    } else if(lookingForDropdown.value == 'Shirts & Tops')
+    {
+        var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
+    }
+
+    for(let option in optionArray)
+    {
+        let pair = optionArray[option].split("|");
+        let newoption = document.createElement("option");
+
+        newoption.value = pair [0];
+        newoption.innerHTML = pair [1];
+        genderDropdown.options.add(newoption);
+    }
+    
+}}))};
 
 function initialize(){
     fetchItems()
     hideDropdownWhenClicked()
-    lookingForSelection()
-    genderSelection()
+    //lookingForSelection()
+    //genderSelection()
 }
 initialize()
 
@@ -156,29 +213,5 @@ initialize()
 
 
 
-//4. THAT RESULT, filter IT BY CATEGORY:
-//1. grab the previous return
-//2. grab the category Im looking for 
-//3. grab user Im looking for choice
-//4. return items that match that choice 
 
-//5. THAT RESULT, filter IT BY GENDER:
-//1. grab the previous return
-//2. grab the GENDER Im looking for 
-//3. grab user Im looking for choice
-//4. return items that match that choice 
-
-//6. THAT RESULT, filter IT BY GENDER:
-//1. grab the previous return
-//2. grab the GENDER Im looking for 
-//3. grab user Im looking for choice
-//4. return items that match that choice 
-
-//7. THAT RESULT, filter IT BY GENDER:
-//1. grab the previous return
-//2. grab the GENDER Im looking for 
-//3. grab user Im looking for choice
-//4. return items that match that choice 
-
-
-//future adds-on: like to save, live map to navigate the mall.
+// future adds-on: like to save, live map to navigate the mall.

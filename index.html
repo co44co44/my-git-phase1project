@@ -24,7 +24,7 @@
     <div id = "dropdowns-area">
     <hr>
     <label for="select-mall" id="select-your-mall">Select your State</label> 
-    <select id="state-dropdown" name="select-breed">
+    <select id="state-dropdown" name="select-state">
      <!-- <option id= "Sawgrass Mills Mall" value="Sawgrass Mills Mall"> ...    </option> -->
       <option id= "Sawgrass Mills Mall" value="Sawgrass Mills Mall">Florida</option>
       
@@ -41,7 +41,7 @@
     </select>
     <hr>
     <label  for="select-looking_for" id="looking-for">I am looking for: </label>
-    <select class = "dropdown-class" id="looking-for-dropdown" name="select-looking-for">
+    <select class = "dropdown-class" id="looking-for-dropdown" name="select-looking-for" onchange="handleSelectChange(this.id,'gender-dropdown')">
       <option id= "looking-for-dropdown1" value="blank"> ...    </option>
       <option id= "looking-for-dropdown2" value="Pants">Pants</option>
       <option id = "looking-for-dropdown3" value="Pajamas">Pajamas</option>
@@ -63,7 +63,7 @@
 
     
     <label for="select-mall" id="select-your-mall">Gender:</label>
-    <select class = "dropdown-class" id="gender-dropdown" name="select-gender">
+    <select onchange="handleSelectChange(event)" class = "dropdown-class" id="gender-dropdown" name="select-gender">
       <option id= "gender-dropdown1" value="..."> ...    </option>
       <option id= "gender-dropdown2" value="female">female</option>
       <option id = "gender-dropdown3" value="male">male</option>
