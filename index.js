@@ -155,48 +155,48 @@ function removeAllChildNodesItems(parent){
 //    }
 // }))}; 
 
-function handleSelectChange(genderDropdown,lookingForDropdown){
-    // let genderDropdown = document.getElementById(#gender-dropdown);
-    // let lookingForDropdown = document.getElementById(#looking-for-dropdown);
-    fetch('http://localhost:3000/items')
-    .then((response) => response.json())
-    .then((items) => items.filter(item => {
-        //console.log (item.name)
-        //console.log (dropdownLookingFor.value)
-        if (item.name == dropdownLookingFor.value) {
-            console.log('4.fetch lookingfor dropdown ')
+// function handleSelectChange(genderDropdown,lookingForDropdown){
+//     // let genderDropdown = document.getElementById(#gender-dropdown);
+//     // let lookingForDropdown = document.getElementById(#looking-for-dropdown);
+//     fetch('http://localhost:3000/items')
+//     .then((response) => response.json())
+//     .then((items) => items.filter(item => {
+//         //console.log (item.name)
+//         //console.log (dropdownLookingFor.value)
+//         if (item.name == dropdownLookingFor.value) {
+//             console.log('4.fetch lookingfor dropdown ')
             
-    cardItem(item)
+//     cardItem(item)
  
-        document.querySelector('#sorted-collection').appendChild
+//         document.querySelector('#sorted-collection').appendChild
 
-    genderDropdown.innerHTML = "";
+//     genderDropdown.innerHTML = "";
 
-    if (lookingForDropdown.value == "pants")
-    {
-        var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
+//     if (lookingForDropdown.value == "pants")
+//     {
+//         var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
 
     
-    } else if(lookingForDropdown.value == 'pajamas')
-    {
-        var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
+//     } else if(lookingForDropdown.value == 'pajamas')
+//     {
+//         var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
 
-    } else if(lookingForDropdown.value == 'Shirts & Tops')
-    {
-        var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
-    }
+//     } else if(lookingForDropdown.value == 'Shirts & Tops')
+//     {
+//         var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
+//     }
 
-    for(let option in optionArray)
-    {
-        let pair = optionArray[option].split("|");
-        let newoption = document.createElement("option");
+//     for(let option in optionArray)
+//     {
+//         let pair = optionArray[option].split("|");
+//         let newoption = document.createElement("option");
 
-        newoption.value = pair [0];
-        newoption.innerHTML = pair [1];
-        genderDropdown.options.add(newoption);
-    }
+//         newoption.value = pair [0];
+//         newoption.innerHTML = pair [1];
+//         genderDropdown.options.add(newoption);
+//     }
     
-}}))};
+// }}))};
 
 function initialize(){
     fetchItems()
