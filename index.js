@@ -64,8 +64,8 @@ function hideDropdownWhenClicked(){
         item.addEventListener ('change', (e) =>{
             removeAllChildNodesItems(document.querySelector('#sorted-collection'));
             console.log ('3. items are hidding')
-            //lookingForSelection()
-           // genderSelection()
+            lookingForSelection()
+           genderSelection()
 
 //I am changing this area so I add a class to grab all dropdowns by their class
 // so I do not have to repeat my code.
@@ -88,19 +88,19 @@ function removeAllChildNodesItems(parent){
 // if dropdown.value == to item.name, put the item in the cardItem function.
 // Then, upload it to the DOM with queryselector.appendChild
 
-// let lookingForSelection = () => {
-//     fetch('http://localhost:3000/items')
-//     .then((response) => response.json())
-//     .then((items) => items.filter(item => {
-//         //console.log (item.name)
-//         //console.log (dropdownLookingFor.value)
-//         if (item.name == dropdownLookingFor.value) {
-//             console.log('4.fetch lookingfor dropdown ')
+let lookingForSelection = () => {
+    fetch('http://localhost:3000/items')
+    .then((response) => response.json())
+    .then((items) => items.filter(item => {
+        //console.log (item.name)
+        //console.log (dropdownLookingFor.value)
+        if (item.name == dropdownLookingFor.value) {
+            console.log('4.fetch lookingfor dropdown ')
             
-//     cardItem(item)
+    cardItem(item)
  
-//         document.querySelector('#sorted-collection').appendChild
-//     }}))}; 
+        document.querySelector('#sorted-collection').appendChild
+    }}))}; 
 
 // function lookingForSelection(){
 //      fetch('http://localhost:3000/items')
@@ -122,23 +122,24 @@ function removeAllChildNodesItems(parent){
 //filters it by a conditional: if dropdown.value == to item.name, put the item in the cardItem function.
 // Then, upload it to the DOM with queryselector.appendChild
 
-
-
-
-// let genderSelection = () => {
-//     console.log (lookingForSelection)
-    
-//     // return lookingForSelection.filter(item => {
-//     //    console.log (item.gender)
-//     //    console.log (dropdownGender.value)
-//        if (lookingForSelection.value.item.gender == dropdownGender.value) {
-//            console.log('5.fetch gender dropdown ')
+let genderSelection = () => {
+    console.log (item)
+    lookingForSelection(item.gender)
+    return item[gender].filter((item) => {
+        for (let key in lookingForSelection){
+            if(item[gender].value === dropdownGender.gender.value)
+            cardItem(item)
+        }
+    //    console.log (item.gender)
+    //    console.log (dropdownGender.value)
+    //    if (lookingForSelection.gender.value == dropdownGender.gender.value) {
+    //        console.log('5.fetch gender dropdown ')
        
 //    cardItem(item)
 
-//        document.querySelector('#sorted-collection').appendChild
-//    }}
-// // })}; 
+       document.querySelector('#sorted-collection').appendChild
+   })}
+// })}; 
 
 // function genderSelection(){
 //     fetch('http://localhost:3000/items')
@@ -201,8 +202,8 @@ function removeAllChildNodesItems(parent){
 function initialize(){
     fetchItems()
     hideDropdownWhenClicked()
-    //lookingForSelection()
-    //genderSelection()
+    lookingForSelection()
+    genderSelection()
 }
 initialize()
 
