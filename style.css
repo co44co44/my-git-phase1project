@@ -113,22 +113,27 @@ body {
     font-size: 10px;
     text-align: left;
   }
-  button {
+  .like {
     position: relative;
-    background-color: #e23c45;
-    border: none;
-    border-radius: 5px;
+    background-color: #f7f2f2;
+    border:#0b0c11;
+    border-radius: 10px;
     height: 2rem;
-    width: max-content;
-    color: whitesmoke;
+    width: 8rem;
+    color: rgb(78, 3, 3);
     font-size: 18px;
     justify-self: center;
+    cursor: pointer;
   }
-  
-  button:hover {
-    background-color: rgb(107, 200, 234);
-    border: #e04b52 solid 1px;
-    color: #e04b52;
+  .like-glyph{
+
+  font-size: 18px;
+ 
+
+  }
+  .like-glyph:hover {
+    color: rgb(243, 25, 25);
+    font-size: 18px;
   }
   
   .choose-section {

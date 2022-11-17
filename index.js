@@ -19,7 +19,9 @@ function fetchItems(){
 //2. create the card were each item will show
 
 function cardItem(item){
-    
+    const EMPTY_HEART = '♡'
+    const FULL_HEART = '♥'
+
     console.log ('2.cardItem runs')
 
     let card = document.createElement ('div') 
@@ -30,8 +32,8 @@ function cardItem(item){
 
     <img class ="item_picture" src = '${item.image}'>
     <p style="text-align:center">
-    <button class="map-btn" id=${item.id}> Take me to ${item.store}! </button>
-    </p>
+    <p class="like">Like! <span class="like-glyph">${EMPTY_HEART}</span></p>
+
     <p id=""> Details:</p>
         <ul id="details_list">
             <li>Gender:${item.gender} </li>
@@ -41,19 +43,40 @@ function cardItem(item){
 
     `
 //3. add/append card to the card area (DOM)
-    document.querySelector('#sorted-collection').appendChild(card)
-    
-   // likeBtnClick(item)
+      
+
+
+// likeBtnClick(item)
+
+
+
+//GRAB HTML HEART DRAWING AND ADD AN EVENT LISTENER TO IT SO WE CAN CLICK ON IT.
+let heart=document.querySelectorAll(".like-glyph")
+
+for (let i=0; i<heart.length; i++){
+  heart [i].addEventListener ("click", clickEmptyHeart); 
 }
 
-//4. initialize
+
+//CREATE A FUNCTION WHERE I SAY THAT IF I CLICK THE EMPTY HEART IT WILL CHANGE COLOR
+function clickEmptyHeart (e) {
+  console.log (e.target)
+  console.log ("click Empty Heart runs")
+    if (e.target.innerHTML==EMPTY_HEART){
+      e.target.innerHTML = FULL_HEART
+    }else (e.target.innerHTML = EMPTY_HEART)
+  }
+  document.querySelector('#sorted-collection').appendChild(card)
+  
+}
+
 
 
 //3. filter the items by "I am looking for":
 //1. grab the "Im looking for" menu
 
 let dropdownLookingFor = document.querySelector('#looking-for-dropdown');
-let dropdownGender = document.querySelector('#gender-dropdown');
+
 
 
 //2. remove data displayed in the DOM by creating a function that tells what will happend 
@@ -65,16 +88,7 @@ function hideDropdownWhenClicked(){
             removeAllChildNodesItems(document.querySelector('#sorted-collection'));
             console.log ('3. items are hidding')
             lookingForSelection()
-           genderSelection()
-
-//I am changing this area so I add a class to grab all dropdowns by their class
-// so I do not have to repeat my code.
-    // dropdownLookingFor.addEventListener ('change', (e) =>{
-    // removeAllChildNodesItems(document.querySelector('#sorted-collection'));
-    // console.log ('3. items are hidding')
-    // lookingForSelection()
-    // genderSelection()
-
+          
     document.querySelector('#sorted-collection').appendChild.innerHTML;
     })})}
 
@@ -88,8 +102,10 @@ function removeAllChildNodesItems(parent){
 // if dropdown.value == to item.name, put the item in the cardItem function.
 // Then, upload it to the DOM with queryselector.appendChild
 
-let lookingForSelection = () => {
-    fetch('http://localhost:3000/items')
+
+
+function lookingForSelection(){
+     fetch('http://localhost:3000/items')
     .then((response) => response.json())
     .then((items) => items.filter(item => {
         //console.log (item.name)
@@ -98,121 +114,16 @@ let lookingForSelection = () => {
             console.log('4.fetch lookingfor dropdown ')
             
     cardItem(item)
- 
+
         document.querySelector('#sorted-collection').appendChild
-    }}))}; 
-
-// function lookingForSelection(){
-//      fetch('http://localhost:3000/items')
-//     .then((response) => response.json())
-//     .then((items) => items.filter(item => {
-//         //console.log (item.name)
-//         //console.log (dropdownLookingFor.value)
-//         if (item.name == dropdownLookingFor.value) {
-//             console.log('4.fetch lookingfor dropdown ')
-            
-//     cardItem(item)
-
-//         document.querySelector('#sorted-collection').appendChild
-//     }
-// }))}; 
- // CREATE THE GENDER DROPDOWN:
-//1. at the top (global scope) grab the gender dropdown with query selector 
-//2.create a function genderSelection() that: fetchs from server the data, 
-//filters it by a conditional: if dropdown.value == to item.name, put the item in the cardItem function.
-// Then, upload it to the DOM with queryselector.appendChild
-
-let genderSelection = () => {
-    console.log (item)
-    lookingForSelection(item.gender)
-    return item[gender].filter((item) => {
-        for (let key in lookingForSelection){
-            if(item[gender].value === dropdownGender.gender.value)
-            cardItem(item)
-        }
-    //    console.log (item.gender)
-    //    console.log (dropdownGender.value)
-    //    if (lookingForSelection.gender.value == dropdownGender.gender.value) {
-    //        console.log('5.fetch gender dropdown ')
-       
-//    cardItem(item)
-
-       document.querySelector('#sorted-collection').appendChild
-   })}
-// })}; 
-
-// function genderSelection(){
-//     fetch('http://localhost:3000/items')
-//    .then((response) => response.json())
-//    .then((items) => items.filter(item => {
-//        console.log (item.gender)
-//        console.log (dropdownGender.value)
-//        if (item.gender == dropdownGender.value) {
-//            console.log('5.fetch gender dropdown ')
-           
-//    cardItem(item)
-
-//        document.querySelector('#sorted-collection').appendChild
-//    }
-// }))}; 
-
-// function handleSelectChange(genderDropdown,lookingForDropdown){
-//     // let genderDropdown = document.getElementById(#gender-dropdown);
-//     // let lookingForDropdown = document.getElementById(#looking-for-dropdown);
-//     fetch('http://localhost:3000/items')
-//     .then((response) => response.json())
-//     .then((items) => items.filter(item => {
-//         //console.log (item.name)
-//         //console.log (dropdownLookingFor.value)
-//         if (item.name == dropdownLookingFor.value) {
-//             console.log('4.fetch lookingfor dropdown ')
-            
-//     cardItem(item)
+    }
+}))}; 
  
-//         document.querySelector('#sorted-collection').appendChild
 
-//     genderDropdown.innerHTML = "";
-
-//     if (lookingForDropdown.value == "pants")
-//     {
-//         var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
-
-    
-//     } else if(lookingForDropdown.value == 'pajamas')
-//     {
-//         var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
-
-//     } else if(lookingForDropdown.value == 'Shirts & Tops')
-//     {
-//         var optionArray = ['female|Female', 'male|Male','unisex|Unisex'];
-//     }
-
-//     for(let option in optionArray)
-//     {
-//         let pair = optionArray[option].split("|");
-//         let newoption = document.createElement("option");
-
-//         newoption.value = pair [0];
-//         newoption.innerHTML = pair [1];
-//         genderDropdown.options.add(newoption);
-//     }
-    
-// }}))};
 
 function initialize(){
     fetchItems()
     hideDropdownWhenClicked()
     lookingForSelection()
-    genderSelection()
 }
 initialize()
-
-
-//2. filter items by user choice.
-
-
-
-
-
-
-// future adds-on: like to save, live map to navigate the mall.
