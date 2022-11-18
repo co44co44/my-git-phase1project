@@ -2,18 +2,21 @@
 # Name: 
 MyMallHelper
 
+# Video: 
+This is a link of blog post that goes through the development of this app. 
 # Description: 
-MyMallHelper is an app that helps shoppers who are visiting a Mall, to find the store(s) at that same mall, where the item they are looking for is being sold. The app will return to the user: the items available at their current mall that matched their search, the name(s) of the store(s), and their location at the current Mall.  
+MyMallHelper is an app that helps shoppers who are visiting a Mall, to find the store(s) at that same mall, where the item they are looking for is being sold. 
+The app will return to the user: the items available at the mall that matched their search, the name(s) of the store(s) where it is sold, the product details (size, color, gender), and their store location at the current Mall.  It will also allow the user to click on their favorite item to recognize them while he shops. 
 
 # Story of this app: 
- Shoppers at a mall can waste a lot of time looking for an item.  It is exhausting and requires a lot of effort and energy because of not knowing where to go.  This app wants to help shoppers find the item they need, by provinding them the store name and location where their item is being sold. 
+ Shoppers at a mall can waste a lot of time looking for an item.  It is exhausting and requires a lot of effort and energy because of not knowing where to go to find what they are looking for.  This app wants to help shoppers find the item they need, by provinding them the store name, details and location where their item is being sold. 
 
 # Audience:
 Shoppers at an specific Mall.  
 This first first version of the app will mock the Sawgrass Mills Mall at Sunrise-Florida. 
 
 # Server:
-In the future, the data used will be the data from the online stores that are physically at those malls. However, for this project, a jb.json file is being used with the data that the user will have available. 
+In the future, the data used will be the data from the online stores that are physically at those malls. However, for this project, a jb.json file is being used with the data that the user will have available. I used real pictures and data from two main stores: GAP (https://www.gap.com/) and OLD NAVY (https://oldnavy.gap.com/) 
 
 # Support:
 If you need support contact me at : crisordonez44@gmail.com 
@@ -21,11 +24,13 @@ If you need support contact me at : crisordonez44@gmail.com
 # Author:
 Maria Cristina Ordonez C.
 
-# The data was obtained and created using:
+# Part of the data at the db.json file, including images, was obtained from:
 https://oldnavy.gap.com/
+https://www.gap.com/
 
 
 # Future additions:
+- This all will have more dropdowns which will be chained, so the user can use more categories. 
 - This app will find your location, so it will automatically select your mall.  This will be instead of Select your State & Select your Mall.
 - When you click take me to the stores' location in a live map.  This will be a future addition on further phases. 
 - This app will do scrapping for using the websites' servers on the stores at the malls to retrieve data (instead of the db.json file).
@@ -33,7 +38,7 @@ https://oldnavy.gap.com/
 -The state and the Mall are setup by default for this project, this will change on future phases where I will be able to add their live location. 
 
 # Project Status:
-Currenly working on it...
+Phase-1 
 
 -------------------------
 ERASE THE FOLLOWING WHEN DONE =>

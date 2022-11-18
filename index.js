@@ -38,8 +38,7 @@ function cardItem(item){
     `
 //3. add/append card to the card area (DOM)
 
-
-
+document.querySelector('#sorted-collection').appendChild(card)
 
 
 //GRAB HTML HEART DRAWING AND ADD AN EVENT LISTENER TO IT SO WE CAN CLICK ON IT.
