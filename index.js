@@ -1,6 +1,5 @@
 
 
-//1. PROJECT THE ITEMS AVAILABLE TO THE DOM: 
 //1. make a request to the server.
 function fetchItems(){
     fetch('http://localhost:3000/items')

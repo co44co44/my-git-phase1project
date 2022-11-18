@@ -79,10 +79,12 @@ body {
   #details_area {
     text-align: left;
     justify-self: left;
+    font-size: 18px;
   }
   #details_list {
-    font-size: 10px;
+    font-size: 14px;
     text-align: left;
+    
   }
   .like {
     position: relative;
@@ -105,6 +107,7 @@ body {
   .like-glyph:hover {
     color: rgb(243, 25, 25);
     font-size: 18px;
+    border-radius: 10px;
   }
   
   .choose-section {
@@ -120,25 +123,8 @@ body {
     width: 70%
   }
   
-  .submit {
-    position: relative;
-    background-color: #e04b52;
-    border-radius: 5px;
-    height: 2rem;
-    width: max-content;
-    color: whitesmoke;
-    font-size: 18px;
-    justify-self: center;
-    font-family: monospace;
-    margin: 3px;
-  }
-  
-  .submit:hover {
-    background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
-  }
-  
+
+
 
   
   
