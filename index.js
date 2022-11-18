@@ -17,36 +17,28 @@ function fetchItems(){
 }
 
 //2. create the card were each item will show
+const EMPTY_HEART = '♡'
+const FULL_HEART = '♥'
 
 function cardItem(item){
-    const EMPTY_HEART = '♡'
-    const FULL_HEART = '♥'
-
-    console.log ('2.cardItem runs')
-
+   
     let card = document.createElement ('div') 
     card.className = 'card'
     card.innerHTML = `
-
     <h2> "${item.name} @ ${item.store} @ ${item.mall}" </h2>
-
     <img class ="item_picture" src = '${item.image}'>
     <p style="text-align:center">
     <p class="like">Like! <span class="like-glyph">${EMPTY_HEART}</span></p>
-
     <p id=""> Details:</p>
         <ul id="details_list">
             <li>Gender:${item.gender} </li>
             <li>Size: ${item.size}</li>
             <li>Color: ${item.color}</li>
         </ul>
-
     `
 //3. add/append card to the card area (DOM)
-      
 
 
-// likeBtnClick(item)
 
 
 
@@ -92,32 +84,47 @@ function hideDropdownWhenClicked(){
     document.querySelector('#sorted-collection').appendChild.innerHTML;
     })})}
 
-function removeAllChildNodesItems(parent){
-    while (parent.firstChild){
-        parent.removeChild(parent.firstChild);
-    }}
+
+    function removeAllChildNodesItems(parent){
+        while (parent.firstChild){
+            parent.removeChild(parent.firstChild);
+        }}
+    
 
 // Code for the DROPDOWN "I am looking for":
 // create a function lookingForSelection() that: fetchs from server the data, filters it by a conditional:
 // if dropdown.value == to item.name, put the item in the cardItem function.
 // Then, upload it to the DOM with queryselector.appendChild
 
-
-
 function lookingForSelection(){
-     fetch('http://localhost:3000/items')
-    .then((response) => response.json())
-    .then((items) => items.filter(item => {
-        //console.log (item.name)
-        //console.log (dropdownLookingFor.value)
-        if (item.name == dropdownLookingFor.value) {
-            console.log('4.fetch lookingfor dropdown ')
-            
-    cardItem(item)
-
+    fetch('http://localhost:3000/items')
+   .then((response) => response.json())
+   .then((items) => items.filter(filterByDropdownSelection))
+           console.log('4.fetch lookingfor dropdown ')
+}; 
+function filterByDropdownSelection(item){
+    if (item.name == dropdownLookingFor.value) {
+        console.log('4.fetch lookingfor dropdown ')
+                    
+        cardItem(item)
+        
         document.querySelector('#sorted-collection').appendChild
     }
-}))}; 
+}
+// function lookingForSelection(){
+//      fetch('http://localhost:3000/items')
+//     .then((response) => response.json())
+//     .then((items) => items.filter(item => {
+//         //console.log (item.name)
+//         //console.log (dropdownLookingFor.value)
+//         if (item.name == dropdownLookingFor.value) {
+//             console.log('4.fetch lookingfor dropdown ')
+            
+//     cardItem(item)
+
+//         document.querySelector('#sorted-collection').appendChild
+//     }
+// }))}; 
  
 
 
