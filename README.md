@@ -2,6 +2,11 @@
 # Name: 
 MyMallHelper
 
+# Blog:
+This links talks about the development of this app.  
+
+https://medium.com/@crisordonez44/my-mall-helper-app-3d406bb1a8fe
+
 # Video: 
 This is a link of blog post that goes through the development of this app. 
 
