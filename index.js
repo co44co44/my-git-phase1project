@@ -4,7 +4,8 @@
 function fetchItems(){
     fetch('http://localhost:3000/items')
     .then((response) => response.json())
-    .then((items) => items.forEach(item => cardItem(item)));
+    .then((items) => items.forEach(item => cardItem(item)))
+    .then((res) => console.log (res))
     console.log ('1.fetchItems runs')
 }
 
@@ -13,7 +14,7 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 function cardItem(item){
-   
+    const clickEmptyHeart = (e) => e.target.innerHTML===EMPTY_HEART ? e.target.innerHTML = FULL_HEART : e.target.innerHTML = EMPTY_HEART
     let card = document.createElement ('div') 
     card.className = 'card'
     card.innerHTML = `
@@ -28,28 +29,23 @@ function cardItem(item){
             <li>Color: ${item.color}</li>
         </ul>
     `
+    
 //3. add/append card to the card area (DOM)
 
-document.querySelector('#sorted-collection').appendChild(card)
-
+    document.querySelector('#sorted-collection').appendChild(card)
+   // .then (document.querySelector("like-glyph").addEventListener("click", clickEmptyHeart ))
 
 //GRAB HTML HEART DRAWING AND ADD AN EVENT LISTENER TO IT SO WE CAN CLICK ON IT.
-let heart=document.querySelectorAll(".like-glyph")
+//let hearts=document.querySelectorAll(".like-glyph")
 
-for (let i=0; i<heart.length; i++){
-  heart [i].addEventListener ("click", clickEmptyHeart); 
-}
+ //hearts.forEach(h => h.addEventListener("click", clickEmptyHeart)) 
+
 
 
 //CREATE A FUNCTION WHERE I SAY THAT IF I CLICK THE EMPTY HEART IT WILL CHANGE COLOR
-function clickEmptyHeart (e) {
-  console.log (e.target)
-  console.log ("click Empty Heart runs")
-    if (e.target.innerHTML==EMPTY_HEART){
-      e.target.innerHTML = FULL_HEART
-    }else (e.target.innerHTML = EMPTY_HEART)
-  }
-  document.querySelector('#sorted-collection').appendChild(card)
+
+
+  //document.querySelector('#sorted-collection').appendChild(card)
   
 }
 
