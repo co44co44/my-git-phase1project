@@ -31,12 +31,11 @@ https://www.gap.com/
 
 
 # Future additions:
-- This all will have more dropdowns which will be chained, so the user can use more categories. 
-- This app will find your location, so it will automatically select your mall.  This will be instead of Select your State & Select your Mall.
-- When you click take me to the stores' location in a live map.  This will be a future addition on further phases. 
+- The app will have more dropdowns which will be chained, so the user can use more categories. 
+- I will add a button that when clicked, it will take to user to the stores' location in a live map.   
 - This app will do scrapping for using the websites' servers on the stores at the malls to retrieve data (instead of the db.json file).
-- This app will have more searching options when it is connected to the server.  Meanwhile, the other options the user will be able to select are commented out. 
--The state and the Mall are setup by default for this project, this will change on future phases where I will be able to add their live location. 
+- This app will have more searching options (Dropdowns) available when it is connected to the server.  
+-The State and the Mall are setup by default for this project, this will change on future phases where I will be able to add their live location.  This app will find the user location, so it will automatically select the mall.  
 
 # Project Status:
 Phase-1 
