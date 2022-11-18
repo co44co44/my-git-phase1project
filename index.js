@@ -1,11 +1,11 @@
 
 
+//1. PROJECT THE ITEMS AVAILABLE TO THE DOM: 
 //1. make a request to the server.
 function fetchItems(){
     fetch('http://localhost:3000/items')
     .then((response) => response.json())
-    .then((items) => items.forEach(item => cardItem(item)))
-    .then((res) => console.log (res))
+    .then((items) => items.forEach(item => cardItem(item)));
     console.log ('1.fetchItems runs')
 }
 
@@ -14,7 +14,7 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 function cardItem(item){
-    const clickEmptyHeart = (e) => e.target.innerHTML===EMPTY_HEART ? e.target.innerHTML = FULL_HEART : e.target.innerHTML = EMPTY_HEART
+   
     let card = document.createElement ('div') 
     card.className = 'card'
     card.innerHTML = `
@@ -29,38 +29,29 @@ function cardItem(item){
             <li>Color: ${item.color}</li>
         </ul>
     `
-    
 //3. add/append card to the card area (DOM)
-
-    document.querySelector('#sorted-collection').appendChild(card)
-   // .then (document.querySelector("like-glyph").addEventListener("click", clickEmptyHeart ))
-
+document.querySelector('#sorted-collection').appendChild(card)
 //GRAB HTML HEART DRAWING AND ADD AN EVENT LISTENER TO IT SO WE CAN CLICK ON IT.
-//let hearts=document.querySelectorAll(".like-glyph")
-
- //hearts.forEach(h => h.addEventListener("click", clickEmptyHeart)) 
-
-
-
+let heart=document.querySelectorAll(".like-glyph")
+for (let i=0; i<heart.length; i++){
+  heart [i].addEventListener ("click", clickEmptyHeart); 
+}
 //CREATE A FUNCTION WHERE I SAY THAT IF I CLICK THE EMPTY HEART IT WILL CHANGE COLOR
-
-
-  //document.querySelector('#sorted-collection').appendChild(card)
+function clickEmptyHeart (e) {
+  console.log (e.target)
+  console.log ("click Empty Heart runs")
+    if (e.target.innerHTML==EMPTY_HEART){
+      e.target.innerHTML = FULL_HEART
+    }else (e.target.innerHTML = EMPTY_HEART)
+  }
+  document.querySelector('#sorted-collection').appendChild(card)
   
 }
-
-
-
 //3. filter the items by "I am looking for":
 //1. grab the "Im looking for" menu
-
 let dropdownLookingFor = document.querySelector('#looking-for-dropdown');
-
-
-
 //2. remove data displayed in the DOM by creating a function that tells what will happend 
 //when the dropdown is clicked
-
 function hideDropdownWhenClicked(){
     document.querySelectorAll('.dropdown-class').forEach(item => {
         item.addEventListener ('change', (e) =>{
@@ -70,25 +61,22 @@ function hideDropdownWhenClicked(){
           
     document.querySelector('#sorted-collection').appendChild.innerHTML;
     })})}
-
-
     function removeAllChildNodesItems(parent){
         while (parent.firstChild){
             parent.removeChild(parent.firstChild);
         }}
     
-
 // DROPDOWN "I am looking for":
 // create a function lookingForSelection() that: requests from server the data, filters it by a conditional:
 // by the user choice at the dropdown, put the retun in the cardItem function.
 // Then, upload it to the DOM with queryselector.appendChild
-
 function lookingForSelection(){
     fetch('http://localhost:3000/items')
    .then((response) => response.json())
-   .then((items) => items.filter(filterByDropdownSelection))
+   .then((items) => items.forEach(filterByDropdownSelection))
            console.log('4.fetch lookingfor dropdown ')
 }; 
+
 function filterByDropdownSelection(item){
     if (item.name == dropdownLookingFor.value) {
         console.log('4.fetch lookingfor dropdown ')
@@ -98,22 +86,6 @@ function filterByDropdownSelection(item){
         document.querySelector('#sorted-collection').appendChild
     }
 }
-// function lookingForSelection(){
-//      fetch('http://localhost:3000/items')
-//     .then((response) => response.json())
-//     .then((items) => items.filter(item => {
-//         //console.log (item.name)
-//         //console.log (dropdownLookingFor.value)
-//         if (item.name == dropdownLookingFor.value) {
-//             console.log('4.fetch lookingfor dropdown ')
-            
-//     cardItem(item)
-
-//         document.querySelector('#sorted-collection').appendChild
-//     }
-// }))}; 
- 
-
 
 function initialize(){
     fetchItems()
