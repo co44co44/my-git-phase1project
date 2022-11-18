@@ -1,5 +1,52 @@
 
 
+
+//dark mode btn
+//1.create in html the btm and add style in css
+// //2. in js, grab the btn with query selector.  Also, grab the body with query selector.
+let darkModeBtn = document.getElementById("dark-mode-btn")
+let body = document.getElementById("body")
+
+// //3. add an event listener to the btn
+
+darkModeBtn.addEventListener('click', changeMode); 
+//     function changeModeDark (){
+//         document.body.classList.add('dark-mode')
+//     }
+    //     if (body.getAttribute = ('body.light-mode')){
+    //         body.setAttribute = ('body.dark-mode')
+    //       } else (body.setAttribute = ('body-light-mode'))
+        
+    //     document.querySelector('#body.light-mode').setAttribute(body)
+    // };
+
+
+function darkMode(){
+    document.body.classList.add('dark-mode')
+}
+function lightMode(){
+    document.body.classList.remove('dark-mode').add('light-mode')
+}
+function changeMode (){
+    console.log ('darkMode')
+    if (document.body.classList = ('body.light-mode')){
+        darkMode()
+        console.log('im in darkMode')
+      } else {
+        lightMode()
+      } 
+      
+    
+
+};
+
+//4. create the call back function of the btn
+
+
+//5. initialize function if needed
+
+
+
 //1. PROJECT THE ITEMS AVAILABLE TO THE DOM: 
 //1. make a request to the server.
 function fetchItems(){
@@ -42,11 +89,12 @@ function clickEmptyHeart (e) {
   console.log ("click Empty Heart runs")
     if (e.target.innerHTML==EMPTY_HEART){
       e.target.innerHTML = FULL_HEART
-    }else (e.target.innerHTML = EMPTY_HEART)
+    } else {
+        (e.target.innerHTML = EMPTY_HEART)
   }
   document.querySelector('#sorted-collection').appendChild(card)
   
-}
+}}
 //3. filter the items by "I am looking for":
 //1. grab the "Im looking for" menu
 let dropdownLookingFor = document.querySelector('#looking-for-dropdown');
@@ -91,5 +139,6 @@ function initialize(){
     fetchItems()
     hideDropdownWhenClicked()
     lookingForSelection()
+    
 }
 initialize()
