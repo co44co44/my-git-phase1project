@@ -4,15 +4,16 @@ MyMallHelper
 
 # Video: 
 This is a link of blog post that goes through the development of this app. 
+
 # Description: 
 MyMallHelper is an app that helps shoppers who are visiting a Mall, to find the store(s) at that same mall, where the item they are looking for is being sold. 
-The app will return to the user: the items available at the mall that matched their search, the name(s) of the store(s) where it is sold, the product details (size, color, gender), and their store location at the current Mall.  It will also allow the user to click on their favorite item to recognize them while he shops. 
+The app will return to the user: the items available at the mall that matched their search, the name(s) of the store(s) where it is sold, the product details (size, color, gender), and their store location at the current Mall.  It will also allow the user to click on their favorite item to recognize them while he shops.  
 
 # Story of this app: 
  Shoppers at a mall can waste a lot of time looking for an item.  It is exhausting and requires a lot of effort and energy because of not knowing where to go to find what they are looking for.  This app wants to help shoppers find the item they need, by provinding them the store name, details and location where their item is being sold. 
 
 # Audience:
-Shoppers at an specific Mall.  
+Shoppers at an specific Mall. At the moment, the App shows Sawgrass Mills.  
 This first first version of the app will mock the Sawgrass Mills Mall at Sunrise-Florida. 
 
 # Server:
