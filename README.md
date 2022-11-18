@@ -11,6 +11,11 @@ This links talks about the development of this app.
 
 https://medium.com/@crisordonez44/my-mall-helper-app-3d406bb1a8fe
 
+
+# [GITHUB REPOSITORY]: 
+https://github.com/co44co44/my-git-phase1project.git
+
+
 # Video: 
 This is a link of blog post that goes through the development of this app. 
 
@@ -47,8 +52,3 @@ Phase-1
 
 # Licence:
 Maria Cristina Ordonez 
-
-# [GITHUB REPOSITORY]: 
-https://github.com/co44co44/my-git-phase1project.git
-
-
