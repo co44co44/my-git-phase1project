@@ -1,9 +1,20 @@
-body {
+  :root{
+    --my-mall-header: #0b0c11;
+    --select-your-mall: #042929;
+    --body
+
+  }
+  
+  #body.light-mode {
     margin: 0;
     font-family: monospace;
     background: #fbfcfc;
   }
-  
+  #body.dark-mode {
+    background-color: black;
+    color: white;
+    font-style: white;
+  }
   #my-mall-header {
     display: flex;
     justify-content: left;
@@ -14,11 +25,16 @@ body {
     margin: 2rem;
   }
   
+  #dark-mode-btn {
+    font-size: larger;
+    text-align: center;  
+    width: 300px;  
 
+
+  }
   #my-mall-header-logo {
     height: 6rem;
     width: auto;
-    
   }
   
   #select-your-mall {
