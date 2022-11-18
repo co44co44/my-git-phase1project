@@ -2,6 +2,10 @@
 # Name: 
 MyMallHelper
 
+# Description: 
+MyMallHelper is an app that helps shoppers who are visiting a Mall, to find the store(s) at that same mall, where the item they are looking for is being sold. 
+The app will return to the user: the items available at the mall that matched their search, the name(s) of the store(s) where it is sold, the product details (size, color, gender), and their store location at the current Mall.  It will also allow the user to click on their favorite item to recognize them while he shops.  
+
 # Blog:
 This links talks about the development of this app.  
 
@@ -9,10 +13,6 @@ https://medium.com/@crisordonez44/my-mall-helper-app-3d406bb1a8fe
 
 # Video: 
 This is a link of blog post that goes through the development of this app. 
-
-# Description: 
-MyMallHelper is an app that helps shoppers who are visiting a Mall, to find the store(s) at that same mall, where the item they are looking for is being sold. 
-The app will return to the user: the items available at the mall that matched their search, the name(s) of the store(s) where it is sold, the product details (size, color, gender), and their store location at the current Mall.  It will also allow the user to click on their favorite item to recognize them while he shops.  
 
 # Story of this app: 
  Shoppers at a mall can waste a lot of time looking for an item.  It is exhausting and requires a lot of effort and energy because of not knowing where to go to find what they are looking for.  This app wants to help shoppers find the item they need, by provinding them the store name, details and location where their item is being sold. 
@@ -53,50 +53,6 @@ https://github.com/co44co44/my-git-phase1project.git
 
 
 
-How should I make it?
-While READMEs can be written in any text file format, the most common one that is used nowadays is Markdown. It allows you to add some lightweight formatting. You can learn more about it at the CommonMark website, which also has a helpful reference guide and an interactive tutorial.
-
-Some other formats that you might see are plain text, reStructuredText (common in Python projects), and Textile.
-
-You can use any text editor. There are plugins for many editors (e.g. Atom, Emacs, Sublime Text, Vim, and Visual Studio Code) that allow you to preview Markdown while you are editing it.
-
-You can also use a dedicated Markdown editor like Typora or an online one like StackEdit or Dillinger. You can even use the editable template below.
-
-TEMPLATE:
-# Foobar
-
-Foobar is a Python library for dealing with word pluralization.
-
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
-
-## Usage
-
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
 
 Suggestions for a good README
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
