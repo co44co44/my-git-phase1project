@@ -52,25 +52,6 @@ Maria Cristina Ordonez
 https://github.com/co44co44/my-git-phase1project.git
 
 
-A well-written informative README.md file. This is the business card of your project and you really want it to look great! A template can be found here: makeareadme.comLinks to an external site.. Some additional considerations:
-If you used someone else's pictures or material please make sure you give them credit in your README.
-If you think your blog post and/or video are really good and would add value, add them to your README.md.
-If you want to go above and beyond, record a few seconds of yourself navigating the app and turn it into a gif. Then, add the gif in your README.md. That way anyone can get a sense of how your app works without leaving the README's page on GitHub!
-
-[GITHUB REPOSITORY]: A detailed commit history (30+ commits is your minimum goal). Committing frequently is a fundamental best practice that you want to acquire as soon as possible. One day you will be collaborating on projects and you'll notice the importance of committing even more. Commit messages should be in the present tense, 50 characters or less and they should describe the changes you are committing.
-What is it?
-A README is a text file that introduces and explains a project. It contains information that is commonly required to understand what the project is about.
-
-Why should I make it?
-It's an easy way to answer questions that your audience will likely have regarding how to install and use your project and also how to collaborate with you.
-Who should make it?
-Anyone who is working on a programming project, especially if you want others to use it or contribute.
-
-When should I make it?
-Definitely before you show a project to other people or make it public. You might want to get into the habit of making it the first file you create in a new project.
-
-Where should I put it?
-In the top level directory of the project. This is where someone who is new to your project will start out. Code hosting services such as GitHub, Bitbucket, and GitLab will also look for your README and display it along with the list of files and directories in your project.
 
 How should I make it?
 While READMEs can be written in any text file format, the most common one that is used nowadays is Markdown. It allows you to add some lightweight formatting. You can learn more about it at the CommonMark website, which also has a helpful reference guide and an interactive tutorial.
