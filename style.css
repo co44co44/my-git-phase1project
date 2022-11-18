@@ -14,21 +14,6 @@ body {
     margin: 2rem;
   }
   
-  a {
-    text-decoration: none;
-  }
-  a:link {
-    color: rgb(31, 207, 223);
-    border-bottom: 1px solid #ff0000;
-  }
-  a:visited {
-    color: #e600e6;
-    border-bottom: 1px solid #b3b3b3;
-  }
-  a:hover {
-    color: #f8faf9;
-    border-bottom: 1px solid #000099;
-  }
 
   #my-mall-header-logo {
     height: 6rem;
@@ -52,16 +37,6 @@ body {
     height: 6rem;
     width: auto;
     margin: 2rem;
-  }
-
-  #categories-menu {
-    display: flex;
-    font-family: Verdana; 
-    font-size: larger;
-    height: 6rem;
-    margin: 2rem;
-    padding: 3rem;
-    background:#4d505e;
   }
 
   #sorted-collection {
