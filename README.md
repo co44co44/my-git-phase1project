@@ -20,7 +20,7 @@ This first first version of the app will mock the Sawgrass Mills Mall at Sunrise
 In the future, the data used will be the data from the online stores that are physically at those malls. However, for this project on phase-1, a jb.json file is being used.  This file contains the data that the user will access. I used real pictures and data from two main stores: GAP (https://www.gap.com/) and OLD NAVY (https://oldnavy.gap.com/) 
 
 # Support:
-If you need support contact me at : crisordonez44@gmail.com 
+If you need support contact Cristina Ordonez at : crisordonez44@gmail.com 
 
 # Author:
 Maria Cristina Ordonez C.
