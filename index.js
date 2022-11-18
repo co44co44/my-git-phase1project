@@ -1,7 +1,7 @@
 
 
 //1. PROJECT THE ITEMS AVAILABLE TO THE DOM: 
-//1. make a request to the server to my project with fetch.
+//1. make a request to the server.
 function fetchItems(){
     fetch('http://localhost:3000/items')
     .then((response) => response.json())
@@ -83,9 +83,9 @@ function hideDropdownWhenClicked(){
         }}
     
 
-// Code for the DROPDOWN "I am looking for":
-// create a function lookingForSelection() that: fetchs from server the data, filters it by a conditional:
-// if dropdown.value == to item.name, put the item in the cardItem function.
+// DROPDOWN "I am looking for":
+// create a function lookingForSelection() that: requests from server the data, filters it by a conditional:
+// by the user choice at the dropdown, put the retun in the cardItem function.
 // Then, upload it to the DOM with queryselector.appendChild
 
 function lookingForSelection(){
