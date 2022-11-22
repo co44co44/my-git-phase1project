@@ -29,7 +29,8 @@ function lightMode(){
 }
 function changeMode (){
     console.log ('darkMode')
-    if (document.body.classList = ('body.light-mode')){
+    
+    if (document.body.classList = ('body')){
         darkMode()
         console.log('im in darkMode')
       } else {
@@ -61,25 +62,32 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 function cardItem(item){
-   
+    let heart = EMPTY_HEART
     let card = document.createElement ('div') 
     card.className = 'card'
     card.innerHTML = `
     <h2> "${item.name} @ ${item.store} @ ${item.mall}" </h2>
     <img class ="item_picture" src = '${item.image}'>
-    <p style="text-align:center">
-    <p class="like">Like! <span class="like-glyph">${EMPTY_HEART}</span></p>
-    <p id=""> Details:</p>
-        <ul id="details_list">
-            <li>Gender:${item.gender} </li>
-            <li>Size: ${item.size}</li>
-            <li>Color: ${item.color}</li>
-        </ul>
-    `
+    <p style="text-align:center">`
+    const p = document.createElement('p')
+    p.classList.add( ) 
+    //add the Span, to the span the class 
+    //add to the span the event listener
+    //heart instead of empty-heart ${heart} innerhtml of span. add eventlistener click, 
+
+
+    //<p class="like">Like! <span class="like-glyph">${EMPTY_HEART}</span></p>
+    // <p id=""> Details:</p>
+    //     <ul id="details_list">
+    //         <li>Gender:${item.gender} </li>
+    //         <li>Size: ${item.size}</li>
+    //         <li>Color: ${item.color}</li>
+    //     </ul>
+    // `
 //3. add/append card to the card area (DOM)
 document.querySelector('#sorted-collection').appendChild(card)
 //GRAB HTML HEART DRAWING AND ADD AN EVENT LISTENER TO IT SO WE CAN CLICK ON IT.
-let heart=document.querySelectorAll(".like-glyph")
+//let heart=document.querySelectorAll(".like-glyph")
 for (let i=0; i<heart.length; i++){
   heart [i].addEventListener ("click", clickEmptyHeart); 
 }
@@ -87,11 +95,14 @@ for (let i=0; i<heart.length; i++){
 function clickEmptyHeart (e) {
   console.log (e.target)
   console.log ("click Empty Heart runs")
-    if (e.target.innerHTML==EMPTY_HEART){
-      e.target.innerHTML = FULL_HEART
+    if (span.innerHTML===EMPTY_HEART){
+      heart.innerHTML = FULL_HEART
     } else {
-        (e.target.innerHTML = EMPTY_HEART)
+        (heart = EMPTY_HEART)
   }
+  //span.innerHTML= `${heart}`
+  //append it to the card
+  //after I add the details with js 
   document.querySelector('#sorted-collection').appendChild(card)
   
 }}
