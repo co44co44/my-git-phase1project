@@ -21,7 +21,7 @@
     color: white;
     font-style: white;
   }
-
+ 
   #my-mall-header {
     display: flex;
     justify-content: left;
@@ -53,7 +53,7 @@
     width: auto;
     margin: 2rem;
   }
-
+ 
   #looking-for{
     font-family: Georgia;
     color: #042929;
@@ -85,7 +85,7 @@
     border: rgb(248, 239, 239) solid 1px;
     padding: 1rem;
     width: 15rem;
-    height: 33rem;
+    height: 37rem;
     display: inline-grid;
     margin: 2rem 3rem;
     box-shadow: 3px 4px #bde8f0;
@@ -116,6 +116,7 @@
   .p {
     width: 0rem;
     height: 1.5rem
+    margin: 0px
   }
   .like {
     position: relative;
