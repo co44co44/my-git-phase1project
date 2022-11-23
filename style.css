@@ -1,20 +1,27 @@
   :root{
     --my-mall-header: #0b0c11;
     --select-your-mall: #042929;
-    --body
+    
 
   }
-  
+  #body {
+    margin: 0;
+    font-family: monospace;
+    background: #fbfcfc;
+  }
+
   #body.light-mode {
     margin: 0;
     font-family: monospace;
     background: #fbfcfc;
   }
+
   #body.dark-mode {
     background-color: black;
     color: white;
     font-style: white;
   }
+
   #my-mall-header {
     display: flex;
     justify-content: left;
@@ -32,6 +39,7 @@
 
 
   }
+
   #my-mall-header-logo {
     height: 6rem;
     width: auto;
@@ -60,6 +68,7 @@
     padding: 1rem;
     background: #4d505e;
   }
+
   #sorted-collection-title {
     display: flex;
     font-family: Verdana; 
@@ -70,6 +79,7 @@
     background:#4d505e;
     color: #e8f3f3;
   }
+  
   .card {
     text-align: center;
     border: rgb(248, 239, 239) solid 1px;
@@ -98,9 +108,14 @@
     font-size: 18px;
   }
   #details_list {
+    font-size: 10px;
     font-size: 14px;
     text-align: left;
-    
+
+  }
+  .p {
+    width: 0rem;
+    height: 1.5rem
   }
   .like {
     position: relative;

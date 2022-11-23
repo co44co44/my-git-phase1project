@@ -69,8 +69,35 @@ function cardItem(item){
     <h2> "${item.name} @ ${item.store} @ ${item.mall}" </h2>
     <img class ="item_picture" src = '${item.image}'>
     <p style="text-align:center">`
-    const p = document.createElement('p')
-    p.classList.add( ) 
+    let p = document.createElement('p')
+    p.id = 'p'
+    p.classList= "like" 
+    card.appendChild(p)
+    let span = document.createElement('span')
+    span.classList = "like-glyph"
+    span.innerHTML = `${heart}`
+    span.addEventListener('click',clickEmptyHeart)
+    p.appendChild(span)
+
+    //p.innerHTML = '<span class="like-glyph"=>`like! ${heart}`</span>'
+    
+    let ul = document.createElement('ul')
+    ul.id= 'details_list'
+    ul.innerHTML = 'Details:'
+   
+    let list = document.createElement('li')
+    list.textContext = `Gender: ${item.gender}`
+    list2 = document.createElement('li')
+    list2.textContent = `Size: ${item.size}`
+    list3 = document.createElement ('li')
+    list3.textContent = `Color: ${item.color}`
+    
+    p.appendChild(ul)
+    ul.appendChild(list)
+    ul.appendChild(list2)
+    ul.appendChild(list3)
+    card.appendChild(p)
+
     //add the Span, to the span the class 
     //add to the span the event listener
     //heart instead of empty-heart ${heart} innerhtml of span. add eventlistener click, 
@@ -85,12 +112,13 @@ function cardItem(item){
     //     </ul>
     // `
 //3. add/append card to the card area (DOM)
-document.querySelector('#sorted-collection').appendChild(card)
+document.querySelector('#sorted-collection').appendChild(card).appendChild(p)
+// document.querySelector('#sorted-collection').appendChild(card)
 //GRAB HTML HEART DRAWING AND ADD AN EVENT LISTENER TO IT SO WE CAN CLICK ON IT.
 //let heart=document.querySelectorAll(".like-glyph")
-for (let i=0; i<heart.length; i++){
-  heart [i].addEventListener ("click", clickEmptyHeart); 
-}
+// for (let i=0; i<heart.length; i++){
+//   heart[i].addEventListener ("click", clickEmptyHeart); 
+// }
 //CREATE A FUNCTION WHERE I SAY THAT IF I CLICK THE EMPTY HEART IT WILL CHANGE COLOR
 function clickEmptyHeart (e) {
   console.log (e.target)
