@@ -19,10 +19,8 @@ darkModeBtn.addEventListener('click', changeMode);
         
     //     document.querySelector('#body.light-mode').setAttribute(body)
     // };
-
-
 function darkMode(){
-    document.body.classList.add('dark-mode')
+    document.body.classList.add('dark-mode').remove('light-mode')
 }
 function lightMode(){
     document.body.classList.remove('dark-mode').add('light-mode')
@@ -30,15 +28,12 @@ function lightMode(){
 function changeMode (){
     console.log ('darkMode')
     
-    if (document.body.classList = ('body')){
+    if (document.body.classList = ('light-mode')){
         darkMode()
         console.log('im in darkMode')
       } else {
         lightMode()
       } 
-      
-    
-
 };
 
 //4. create the call back function of the btn
@@ -66,9 +61,8 @@ function cardItem(item){
     let card = document.createElement ('div') 
     card.className = 'card'
     card.innerHTML = `
-    <h2> "${item.name} @ ${item.store} @ ${item.mall}" </h2>
-    <img class ="item_picture" src = '${item.image}'>
-    <p style="text-align:center">`
+    <h2 id = item> "${item.name} @ ${item.store} @ ${item.mall}" </h2>
+    <img class ="item_picture" src = '${item.image}'>`
     let p = document.createElement('p')
     p.id = 'p'
     p.classList= "like" 
@@ -78,26 +72,27 @@ function cardItem(item){
     span.innerHTML = `${heart}`
     span.addEventListener('click',clickEmptyHeart)
     p.appendChild(span)
-
-    //p.innerHTML = '<span class="like-glyph"=>`like! ${heart}`</span>'
-    
     let ul = document.createElement('ul')
     ul.id= 'details_list'
     ul.innerHTML = 'Details:'
-   
-    let list = document.createElement('li')
-    list.textContext = `Gender: ${item.gender}`
-    list2 = document.createElement('li')
-    list2.textContent = `Size: ${item.size}`
-    list3 = document.createElement ('li')
-    list3.textContent = `Color: ${item.color}`
     
-    p.appendChild(ul)
-    ul.appendChild(list)
-    ul.appendChild(list2)
-    ul.appendChild(list3)
-    card.appendChild(p)
+    //debugger
+    let list1 = document.createElement('li')
+    list1.textContent = `Gender: ${item.gender}`
+    console.log("list1", list1)
+    ul.appendChild(list1)
 
+    let list2 = document.createElement('li')
+    list2.textContent = `Size: ${item.size}`
+    console.log("list2", list2)
+    ul.appendChild(list2)
+    
+    let list3 = document.createElement ('li')
+    list3.textContent = `Color: ${item.color}`
+    ul.appendChild(list3)
+    p.appendChild(ul)
+    card.appendChild(p)
+   
     //add the Span, to the span the class 
     //add to the span the event listener
     //heart instead of empty-heart ${heart} innerhtml of span. add eventlistener click, 
@@ -126,19 +121,13 @@ function clickEmptyHeart (e) {
     if (span.innerHTML===EMPTY_HEART){
         span.innerHTML = FULL_HEART
     } else {
-        (span = EMPTY_HEART)
+        (span.innerHTML = EMPTY_HEART)
   }
-  //span.innerHTML= `${heart}`
-  //append it to the card
-  //after I add the details with js 
-  //document.querySelector('#sorted-collection').appendChild(card)
-  
 }}
 //3. filter the items by "I am looking for":
 //1. grab the "Im looking for" menu
 let dropdownLookingFor = document.querySelector('#looking-for-dropdown');
-//2. remove data displayed in the DOM by creating a function that tells what will happend 
-//when the dropdown is clicked
+
 function hideDropdownWhenClicked(){
     document.querySelectorAll('.dropdown-class').forEach(item => {
         item.addEventListener ('change', (e) =>{
