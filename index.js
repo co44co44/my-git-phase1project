@@ -19,23 +19,27 @@ darkModeBtn.addEventListener('click', changeMode);
         
     //     document.querySelector('#body.light-mode').setAttribute(body)
     // };
-function darkMode(){
-    document.body.classList.add('dark-mode').remove('light-mode')
-}
-function lightMode(){
-    document.body.classList.remove('dark-mode').add('light-mode')
-}
+// function darkMode(){
+//     document.body.classList.add('dark-mode')
+// }
+// function lightMode(){
+//     document.body.classList.remove('dark-mode').add('light-mode')
+// }
+// function changeMode (){
+//     console.log ('darkMode')
+    
+//     if (document.body.classList = ('body')){
+//         darkMode()
+//         console.log('im in darkMode')
+//       } else {
+//         lightMode()
+//       } 
+// };
 function changeMode (){
     console.log ('darkMode')
-    
-    if (document.body.classList = ('light-mode')){
-        darkMode()
-        console.log('im in darkMode')
-      } else {
-        lightMode()
-      } 
+    let element = document.body;
+    element.classList.toggle("dark-mode")
 };
-
 //4. create the call back function of the btn
 
 
