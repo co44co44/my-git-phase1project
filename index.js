@@ -10,31 +10,7 @@ let body = document.getElementById("body")
 // //3. add an event listener to the btn
 
 darkModeBtn.addEventListener('click', changeMode); 
-//     function changeModeDark (){
-//         document.body.classList.add('dark-mode')
-//     }
-    //     if (body.getAttribute = ('body.light-mode')){
-    //         body.setAttribute = ('body.dark-mode')
-    //       } else (body.setAttribute = ('body-light-mode'))
-        
-    //     document.querySelector('#body.light-mode').setAttribute(body)
-    // };
-// function darkMode(){
-//     document.body.classList.add('dark-mode')
-// }
-// function lightMode(){
-//     document.body.classList.remove('dark-mode').add('light-mode')
-// }
-// function changeMode (){
-//     console.log ('darkMode')
-    
-//     if (document.body.classList = ('body')){
-//         darkMode()
-//         console.log('im in darkMode')
-//       } else {
-//         lightMode()
-//       } 
-// };
+
 function changeMode (){
     console.log ('darkMode')
     let element = document.body;
