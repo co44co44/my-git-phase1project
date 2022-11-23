@@ -124,14 +124,14 @@ function clickEmptyHeart (e) {
   console.log (e.target)
   console.log ("click Empty Heart runs")
     if (span.innerHTML===EMPTY_HEART){
-      heart.innerHTML = FULL_HEART
+        span.innerHTML = FULL_HEART
     } else {
-        (heart = EMPTY_HEART)
+        (span = EMPTY_HEART)
   }
   //span.innerHTML= `${heart}`
   //append it to the card
   //after I add the details with js 
-  document.querySelector('#sorted-collection').appendChild(card)
+  //document.querySelector('#sorted-collection').appendChild(card)
   
 }}
 //3. filter the items by "I am looking for":
