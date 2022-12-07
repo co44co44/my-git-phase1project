@@ -36,8 +36,9 @@
   #dark-mode-btn {
     font-size: larger;
     text-align: center;  
-    width: 300px;  
-
+    width: 200px;  
+    margin: auto;
+    width: auto;
   }
 
   #my-mall-header-logo {

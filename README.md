@@ -17,10 +17,11 @@ https://github.com/co44co44/my-git-phase1project.git
 
 
 # Video: 
-This is a link of blog post that goes through the development of this app. 
+This link is a video with a walkthough of the app. 
+https://youtu.be/UwKvwdh8zB8
 
 # Story of this app: 
- Shoppers at a mall can waste a lot of time looking for an item.  It is exhausting and requires a lot of effort and energy because of not knowing where to go to find what they are looking for.  This app wants to help shoppers find the item they need, by provinding them the store name, details and location where their item is being sold. 
+ Shoppers at a mall can waste a lot of time looking for an item.  It is exhausting and requires a lot of effort and energy because of not knowing where to go to find what they are looking for.  This app wants to help shoppers find the item they need, by provinding them the store name, details and location where their item is being sold.  
 
 # Audience:
 Shoppers at an specific Mall. At the moment, the App shows Sawgrass Mills.  
