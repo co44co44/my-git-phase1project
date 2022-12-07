@@ -1,5 +1,4 @@
 
-//dark mode btn
 let darkModeBtn = document.getElementById("dark-mode-btn")
 let body = document.getElementById("body")
 
@@ -12,7 +11,6 @@ function changeMode (){
 };
 
 
-//request data
 
 function fetchItems(){
     fetch('http://localhost:3000/items')
@@ -21,7 +19,7 @@ function fetchItems(){
     console.log ('1.fetchItems runs')
 }
 
-//create card 
+
 
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
@@ -64,11 +62,7 @@ function cardItem(item){
     p.appendChild(ul)
     card.appendChild(p)
    
-//add/append card to the card area (DOM)
 document.querySelector('#sorted-collection').appendChild(card).appendChild(p)
-
-
-//callback function click empty heart event listener
 
 function clickEmptyHeart (e) {
   console.log (e.target)
@@ -80,7 +74,8 @@ function clickEmptyHeart (e) {
   }
 }}
 
-// dropdowns: grab, event listener change: used when tha value is changed, 
+
+
 let dropdownLookingFor = document.querySelector('#looking-for-dropdown');
 
 function hideDropdownWhenClicked(){
@@ -92,13 +87,12 @@ function hideDropdownWhenClicked(){
           
     document.querySelector('#sorted-collection').appendChild.innerHTML;
     })})}
-
 function removeAllChildNodesItems(parent){
         while (parent.firstChild){
             parent.removeChild(parent.firstChild);
         }}
     
-// DROPDOWN "I am looking for":
+
 
 function lookingForSelection(){
     fetch('http://localhost:3000/items')
@@ -120,5 +114,4 @@ function initialize(){
     hideDropdownWhenClicked()
     lookingForSelection()  
 }
-
 initialize()
