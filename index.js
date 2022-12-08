@@ -2,6 +2,16 @@
 let darkModeBtn = document.getElementById("dark-mode-btn")
 let body = document.getElementById("body")
 
+document.getElementById("sorted-collection-title").addEventListener("mouseover",mouseOver)
+document.getElementById("sorted-collection-title").addEventListener("mouseout", mouseOut)
+
+function mouseOver() {
+    document.getElementById("sorted-collection-title").style.color = "red";
+  }
+  
+function mouseOut() {
+    document.getElementById("sorted-collection-title").style.color = "black";
+  }
 darkModeBtn.addEventListener('click', changeMode); 
 
 function changeMode (){
@@ -9,8 +19,6 @@ function changeMode (){
     let element = document.body;
     element.classList.toggle("dark-mode")
 };
-
-
 
 function fetchItems(){
     fetch('http://localhost:3000/items')
